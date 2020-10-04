@@ -7,7 +7,7 @@ if (empty($_POST['id'])) {
 
 
 $sql = "DELETE FROM stanze WHERE id = ?";
-$stmt = conn->prepare($sql);
+$stmt = $conn->prepare($sql);
 $stmt ->bind_param("i",$id);
 
 $id = $_POST['id'];
